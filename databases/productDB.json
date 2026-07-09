@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "Basic T-Shirt",
+    "price": 59.9,
+    "stock": 50
+  },
+  {
+    "id": 102,
+    "name": "Classic Jeans",
+    "price": 149.9,
+    "stock": 30
+  },
+  {
+    "id": 103,
+    "name": "Hoodie",
+    "price": 129.9,
+    "stock": 25
+  },
+  {
+    "id": 104,
+    "name": "Polo Shirt",
+    "price": 99.9,
+    "stock": 40
+  },
+  {
+    "id": 105,
+    "name": "Sweatpants",
+    "price": 119.9,
+    "stock": 20
+  },
+  {
+    "id": 106,
+    "name": "Jacket",
+    "price": 249.9,
+    "stock": 15
+  },
+  {
+    "id": 107,
+    "name": "Shorts",
+    "price": 79.9,
+    "stock": 35
+  },
+  {
+    "id": 108,
+    "name": "Dress Shirt",
+    "price": 169.9,
+    "stock": 18
+  },
+  {
+    "id": 109,
+    "name": "Sweater",
+    "price": 139.9,
+    "stock": 22
+  },
+  {
+    "id": 110,
+    "name": "Socks",
+    "price": 29.9,
+    "stock": 100
+  }
+]

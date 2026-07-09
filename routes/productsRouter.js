@@ -1,4 +1,8 @@
-[
+import express from 'express'
+
+const router = express.Router()
+
+const products = [
   {
     "customerId": 1,
     "cart": [],
@@ -50,3 +54,9 @@
     "createdAt": "2026-07-01T12:00:00Z"
   }
 ]
+
+router.get("/", (req, res)=>{
+    res.json({products})
+})
+
+export default router
