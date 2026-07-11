@@ -1,62 +1,20 @@
 import express from 'express'
+import { getAllProducts } from '../services/productServer.js'
 
 const router = express.Router()
 
-const products = [
-  {
-    "customerId": 1,
-    "cart": [],
-    "createdAt": "2026-01-15T10:30:00Z"
-  },
-  {
-    "customerId": 2,
-    "cart": [],
-    "createdAt": "2026-02-08T14:20:00Z"
-  },
-  {
-    "customerId": 3,
-    "cart": [],
-    "createdAt": "2026-03-01T09:45:00Z"
-  },
-  {
-    "customerId": 4,
-    "cart": [],
-    "createdAt": "2026-03-18T18:10:00Z"
-  },
-  {
-    "customerId": 5,
-    "cart": [],
-    "createdAt": "2026-04-05T11:55:00Z"
-  },
-  {
-    "customerId": 6,
-    "cart": [],
-    "createdAt": "2026-04-22T16:40:00Z"
-  },
-  {
-    "customerId": 7,
-    "cart": [],
-    "createdAt": "2026-05-10T08:15:00Z"
-  },
-  {
-    "customerId": 8,
-    "cart": [],
-    "createdAt": "2026-06-01T13:30:00Z"
-  },
-  {
-    "customerId": 9,
-    "cart": [],
-    "createdAt": "2026-06-18T20:05:00Z"
-  },
-  {
-    "customerId": 10,
-    "cart": [],
-    "createdAt": "2026-07-01T12:00:00Z"
-  }
-]
 
-router.get("/", (req, res)=>{
-    res.json({products})
+router.get("/", async (req, res) => {
+    const products = await getAllProducts()
+    let result = products
+    const { inStock, maxPrice, search } = req.query
+    if (inStock == "true") result = result.filter(p => p.stock > 0)
+    if (maxPrice && !isNaN(+maxPrice)) result = result.filter(p => p.price <= +req.query.maxPrice)
+    if (search) result = result.filter(p => p.name.toLowerCase().includes(req.query.search.toLowerCase()))
+    if (inStock && inStock !== "true") return res.status(400).end("inStock not true")
+    if (result.length == products.length && req.url.includes("?")) return res.status(400).end("invalid query")
+    res.json({ success: true, data: result })
 })
+
 
 export default router
