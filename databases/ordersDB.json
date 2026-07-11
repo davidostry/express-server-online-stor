@@ -1,0 +1,40 @@
+[
+  {
+    "customerId": 2,
+    "items": [
+      {
+        "productId": 103,
+        "quantity": 5
+      }
+    ],
+    "total": 649.5
+  },
+  {
+    "customerId": 2,
+    "items": [
+      {
+        "productId": 105,
+        "quantity": 3
+      },
+      {
+        "productId": 102,
+        "quantity": 2
+      }
+    ],
+    "total": 659.5
+  },
+  {
+    "customerId": 4,
+    "items": [
+      {
+        "productId": 110,
+        "quantity": 3
+      },
+      {
+        "productId": 107,
+        "quantity": 2
+      }
+    ],
+    "total": 249.5
+  }
+]

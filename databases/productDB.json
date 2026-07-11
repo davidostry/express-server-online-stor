@@ -9,37 +9,37 @@
     "id": 102,
     "name": "Classic Jeans",
     "price": 149.9,
-    "stock": 30
+    "stock": 26
   },
   {
     "id": 103,
     "name": "Hoodie",
     "price": 129.9,
-    "stock": 25
+    "stock": 13
   },
   {
     "id": 104,
     "name": "Polo Shirt",
     "price": 99.9,
-    "stock": 40
+    "stock": 39
   },
   {
     "id": 105,
     "name": "Sweatpants",
     "price": 119.9,
-    "stock": 20
+    "stock": 17
   },
   {
     "id": 106,
     "name": "Jacket",
     "price": 249.9,
-    "stock": 15
+    "stock": 11
   },
   {
     "id": 107,
     "name": "Shorts",
     "price": 79.9,
-    "stock": 35
+    "stock": 33
   },
   {
     "id": 108,
@@ -57,6 +57,6 @@
     "id": 110,
     "name": "Socks",
     "price": 29.9,
-    "stock": 100
+    "stock": 97
   }
 ]
